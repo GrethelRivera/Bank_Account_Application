@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id; // declare property
     private String name;
     private int age;
     private int accountNumber;
@@ -17,7 +17,7 @@ public class Account {
     public Account() {
     }
 
-    public Account(String name, int age, int accountNumber, double balance, int id) {
+    public Account(String name, int age, int accountNumber, double balance, long id) {
 
         this.id = id;
         this.name = name;
